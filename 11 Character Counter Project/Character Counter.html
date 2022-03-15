@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: khaki;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        textarea {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: justify;
+            text-align-last: center;
+            white-space: normal;
+            -moz-text-align-last: center;  /* Firefox 12+ */
+        }
+
+        /* div.justified {
+            display: flex;
+            justify-content: center;
+        } */
+
+        .center {
+            margin-left: 0;
+            position: absolute;
+            left: 58.1%;
+            top: 42%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .center #count-btn {
+            border: 1px solid;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <br><h1>Character Counter</h1><br>
+
+    <textarea id="char-text" rows="10" cols="50"></textarea>
+
+    <div class="center">
+        <span id="char-length"></span>
+        <button id="count-btn">Count Characters</button>
+    </div>
+
+    <script>
+        document.getElementById("count-btn").onclick = function () {
+            var total_length = document.getElementById("char-text").value.length;
+
+            document.getElementById("char-length").innerText = total_length;
+        };
+    </script>
+</body>
+</html>
